@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const paymentProcessor = {
   updateMerchant: async (merchant) => {
     try {
-      const response = await fetch('http://localhost:7000/api/merchants/register', {
+      const response = await fetch('https://payment-processor-a68l.onrender.com/api/merchants/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const paymentProcessor = {
 
   processPayment: async (transactionDetails) => {
     try {
-      const response = await fetch('http://localhost:7000/api/payment/process-payment', {
+      const response = await fetch('https://payment-processor-a68l.onrender.com/api/payment/process-payment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

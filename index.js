@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 9000;
 const { sequelize } = config;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin : '*',
+}));
 
 // Swagger setup
 const swaggerOptions = {

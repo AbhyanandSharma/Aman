@@ -31,13 +31,18 @@ const swaggerOptions = {
     },
     servers: [
       {
+        url: 'https://merchant-1z21.onrender.com',
+        description: 'Production server',
+      },
+      {
         url: `http://localhost:${PORT}`,
         description: 'Development server',
       },
     ],
   },
-  apis: ['./router/*.js', './controllers/*.js'], // Adjusted path for Swagger docs
+  apis: ['./router/*.js', './controllers/*.js'],
 };
+
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));

@@ -34,10 +34,6 @@ const swaggerOptions = {
         url: 'https://merchant-1z21.onrender.com',
         description: 'Production server',
       },
-      {
-        url: `http://localhost:${PORT}`,
-        description: 'Development server',
-      },
     ],
   },
   apis: ['./router/*.js', './controllers/*.js'],
